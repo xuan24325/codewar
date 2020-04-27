@@ -46,14 +46,9 @@ def xo(s):
 # "Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
 # "aA11" -> 2 # 'a' and '1'
 # "ABBA" -> 2 # 'A' and 'B' each occur twice
-def duplicate_count(string):
-     duplicates = []
-     for char in string:
-          if string.count(char) > 1 and char not in duplicates:
-                duplicates.append(char)
-                return duplicates.count(char)
-          else:
-             return 0
+def duplicate_count(s):
+    s=s.lower()
+    return len([x for x in set(s) if s.count(x) > 1])
       
 # len(string) -len(set(string))    
 
