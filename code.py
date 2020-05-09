@@ -70,3 +70,6 @@ def to_jaden_case(string):
 	returned_text=" ".join(revised_text)
 	return returned_text
 
+def to_jaden_case(string):        
+    return " ".join(i.capitalize() for i in string.split())
+
