@@ -73,3 +73,8 @@ def to_jaden_case(string):
 def to_jaden_case(string):        
     return " ".join(i.capitalize() for i in string.split())
 
+import string
+
+def toJadenCase(aaa):
+    return string.capwords(aaa)
+
