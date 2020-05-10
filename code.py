@@ -83,7 +83,7 @@ Write a function that takes in a string of one or more words, and returns the sa
 Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
 
 def spin_words(sentence):
-    sentence = sentence.split(' ')
+    sentence = sentence.split()
     for i in range(len(sentence)):
         if len(sentence[i]) > 4:
             sentence[i] = ''.join(reversed(sentence[i]))
@@ -94,6 +94,6 @@ print(spin_words("Welcome"))    # => "emocleW"
 
 
 def spin_words(sentence):
-    return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split(" ")])
+    return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split()])
 
 	
