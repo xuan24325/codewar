@@ -171,20 +171,8 @@ def maxSequence(arr):
         maxg = max(maxg, maxl)
     return maxg
 
-def maxSequence(arr):
-    current = 0
-    max_found = 0
-    
-    for value in arr:
-        current += value
-        if current < 0:
-            current = 0
-        
-        if current > max_found:
-            max_found = current
-    
-    return max_found
 
+# simple is better
 def max_sequence(arr): 
 
     return max([sum(arr[i:j]) for i in range(len(arr)+1) for j in range(len(arr)+1)])
