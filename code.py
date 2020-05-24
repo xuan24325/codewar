@@ -163,13 +163,14 @@ def max_sequence(arr):
         if curr>max:max=curr
     return max
 
-def maxSequence(arr):
-    maxl = 0
-    maxg = 0
-    for n in arr:
-        maxl = max(0, maxl + n)
-        maxg = max(maxg, maxl)
-    return maxg
+def max_subarray(numbers):
+    """Find the largest sum of any contiguous subarray."""
+    best_sum = 0  # or: float('-inf')
+    current_sum = 0
+    for x in numbers:
+        current_sum = max(0, current_sum + x)
+        best_sum = max(best_sum, current_sum)
+    return best_sum
 
 
 # elegant:)
