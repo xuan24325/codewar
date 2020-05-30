@@ -240,7 +240,8 @@ The directions given to the man are, for example, the following (depending on th
 def dirReduc(arr):
     opposites = [{'NORTH', 'SOUTH'}, {'EAST', 'WEST'}]
     
-    for i in range(len(arr)-1):
+#     for i in range(len(arr)-1): 
+      for i in range(len(arr)):
         if set(arr[i:i+2]) in opposites:
             del arr[i:i+2]
             return dirReduc(arr)
