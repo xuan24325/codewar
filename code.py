@@ -251,3 +251,34 @@ def dirReduc(arr):
 arr=["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
 print(dirReduc(arr))
 
+#11
+Mexican wave
+wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+# def wave(str):
+#     str="hello world"
+#     result=[]
+#     for i in range(len(str)):
+#         str=str.lower()
+#         temp_list=list(str)
+#         if temp_list[i].isalpha():
+#             temp_list[i]=str[i].upper()
+#             str=''.join(temp_list)
+#             print(str)
+#             result.append(str)
+#     return result
+def wave(str):
+    return [str[:i] + str[i].upper() + str[i+1:] for i in range(len(str)) if str[i].isalpha()]
+str="hello world"    
+print(wave(str))
+
+def wave(s):
+    return [s[:i].lower() + s[i:].capitalize() for i in range(len(s)) if s[i] != " "]
+
+s="hello world"    
+print(wave(s))
+
+def wave(t):
+    return [ str[:i] + c.upper() + str[i+1:] for i, c in enumerate(str) if c.isalpha() ]
+t="hello world"    
+print(wave(t))
+
